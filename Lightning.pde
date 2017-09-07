@@ -1,16 +1,19 @@
-int startX=(int)(Math.random()*301);
-int startY=(int)(Math.random()*301);
-int endX=300;
-int endY=(int)(Math.random()*301);
+int startX=150/*(int)(Math.random()*301)*/;
+int startY=150/*(int)(Math.random()*301)*/;
+int endX=(int)(Math.random()*301);
+int endY=300/*(int)(Math.random()*301)*/;
+PImage cloud;
 
 void setup()
 {
   size(300,300);
   strokeWeight(5);
-  background(0);
+  background(6, 30, 68);
+  cloud=loadImage("cloud.png");
 }
 void draw()
 {
+  
   int color1=(int)(Math.random()*256);
   int color2=(int)(Math.random()*256);
   int color3=(int)(Math.random()*256);
@@ -23,11 +26,13 @@ void draw()
   	startX=endX;
   	startY=endY;
   }
+  image(cloud, 0, -50, 300, 300);
 }
 void mousePressed()
 {
-	startX=(int)(Math.random()*301);
-	startY=(int)(Math.random()*301);
-	endX=300;
-	endY=(int)(Math.random()*301);
+	background(6, 30, 68);
+	startX=150/*(int)(Math.random()*301)*/;
+	startY=150/*(int)(Math.random()*301)*/;
+	endX=(int)(Math.random()*301);
+	endY=300/*(int)(Math.random()*301)*/;
 }
