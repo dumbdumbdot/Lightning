@@ -18,10 +18,10 @@ void draw()
   int color2=(int)(Math.random()*256);
   int color3=(int)(Math.random()*256);
   stroke(color1,color2,color3);
-  while(endX<301)
+  while(endY<301)
   {
-  	endX=startX+(int)(Math.random()*10);
-  	endY=startY+(int)((Math.random()*20)-10);
+  	endX=startX+(int)((Math.random()*20)-10);
+  	endY=startY+(int)(Math.random()*10);
   	line(startX, startY, endX, endY);
   	startX=endX;
   	startY=endY;
